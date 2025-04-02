@@ -181,12 +181,12 @@ async def upsale_service(params):
 
         print("****** End Upsale Service ******* \n")
 
-        return json({
+        return {
             "upsale_service_infor": "\n".join(UPSALE_SERVICE[service])
-        })
+        }
     except Exception as err:
         print("Error: ", err)
-        return json({"upsale_service_infor": "There are no information detail for this service."})
+        return {"upsale_service_infor": "There are no information detail for this service."}
 
 
 async def agent_filler(websocket, params):
